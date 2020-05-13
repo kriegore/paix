@@ -1,0 +1,6 @@
+## Interface: 11302
+## Title: Paix
+## Author: kriegore
+## Version: 1.0
+
+index.lua
