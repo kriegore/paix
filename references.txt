@@ -21,3 +21,9 @@ Potentially useful unit methods:
     https://wowwiki.fandom.com/wiki/API_SetPortraitTexture
 
   
+For finding events, type `/etrace`
+
+For targeting:
+  - UPDATE_MOUSEOVER_UNIT
+  - PLAYER_TARGET_CHANGED & UNIT_TARGET
+    
