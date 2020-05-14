@@ -6,9 +6,9 @@ end
 
 Paix:test()
 
-hooksecurefunc("Unit_UnitName", function (self, name)
+hooksecurefunc(TargetUnit, function (unit)
   message("unit name called")
-  print(name)
+  print(unit)
 end)
 
 -- POC part 1
