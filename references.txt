@@ -1,0 +1,23 @@
+Look into changing cursor when hovering over friendlies
+  https://wowwiki.fandom.com/wiki/API_SetCursor
+
+`unit` seems like the entity for players.
+  https://wowwiki.fandom.com/wiki/UnitId
+
+See how this works: `GetMouseFocus():GetName()`
+  Seems like focus returns a `unit`
+  https://wowwiki.fandom.com/wiki/API_GetMouseFocus
+
+Potentially useful unit methods:
+  These could help identify if the a target unit should be marked as friendly:
+    https://wowwiki.fandom.com/wiki/API_UnitIsEnemy
+    https://wowwiki.fandom.com/wiki/API_UnitIsPlayer
+    https://wowwiki.fandom.com/wiki/API_UnitIsSameServer
+    https://wowwiki.fandom.com/wiki/API_UnitCanAttack
+    https://wowwiki.fandom.com/wiki/API_UnitFactionGroup
+  Getting info a player:
+    https://wowwiki.fandom.com/wiki/API_UnitName
+  Change image for portrait?
+    https://wowwiki.fandom.com/wiki/API_SetPortraitTexture
+
+  
