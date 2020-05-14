@@ -1,11 +1,15 @@
 Paix = {}
 
 function Paix:test()
-  message("this is a test")
+  message("Get to work on this addon!!")
 end
 
 Paix:test()
 
+hooksecurefunc(GameTooltip, function (...)
+  message("post game tootip")
+  print("post game tootip")
+end)
 
 -- POC part 1
 --
