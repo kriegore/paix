@@ -6,9 +6,9 @@ end
 
 Paix:test()
 
-hooksecurefunc(GameTooltip, function (...)
-  message("post game tootip")
-  print("post game tootip")
+hooksecurefunc("Unit_UnitName", function (self, name)
+  message("unit name called")
+  print(name)
 end)
 
 -- POC part 1
