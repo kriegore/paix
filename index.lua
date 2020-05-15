@@ -6,11 +6,6 @@ end
 
 Paix:test()
 
--- hooksecurefunc(TargetUnit, function (unit)
---   message("unit name called")
---   print(unit)
--- end)
-
 local frame = CreateFrame("Frame")
 frame:RegisterEvent("PLAYER_TARGET_CHANGED")
 frame:SetScript("OnEvent", function(self, event, ...)
