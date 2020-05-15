@@ -14,8 +14,9 @@ Paix:test()
 local frame = CreateFrame("Frame")
 frame:RegisterEvent("PLAYER_TARGET_CHANGED")
 frame:SetScript("OnEvent", function(self, event, ...)
-  local name = UnitName("playertarget")
-  print("target changed to " .. name)
+  local targetName = UnitName("playertarget")
+  local guildName = GetGuildInfo("playertarget")
+  print("target changed to " .. targetName .. " from " .. guildName)
 end)
 
 
