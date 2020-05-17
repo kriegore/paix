@@ -18,9 +18,9 @@ frame:SetScript("OnEvent", function(self, event, ...)
   local guildName = GetGuildInfo("playertarget")
   local message
   if isEmpty(guildName) then
-    message = "target changed to " .. targetName .. " from " .. guildName
-  else
     message = "target changed to " .. targetName
+  else
+    message = "target changed to " .. targetName .. " from " .. guildName
   end
   print(message)
 end)
