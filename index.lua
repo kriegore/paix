@@ -6,12 +6,23 @@ end
 
 Paix:test()
 
+local function isEmpty(str)
+  return str == nil or str == ''
+end
+
+
 local frame = CreateFrame("Frame")
 frame:RegisterEvent("PLAYER_TARGET_CHANGED")
 frame:SetScript("OnEvent", function(self, event, ...)
   local targetName = UnitName("playertarget")
   local guildName = GetGuildInfo("playertarget")
-  print("target changed to " .. targetName .. " from " .. guildName)
+  local message
+  if isEmpty(guildName) then
+    message = "target changed to " .. targetName .. " from " .. guildName
+  else
+    message = "target changed to " .. targetName
+  end
+  print(message)
 end)
 
 
