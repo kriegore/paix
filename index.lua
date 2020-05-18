@@ -9,13 +9,12 @@ frame.onEvent("ADDON_LOADED", function ()
   SavedState = SavedState or {}
 end)
 
-local optionsFrame = CreateFrame('Options', nil, InterfaceOptionsFrame)
-optionsFrame:SetScript('OnShow', function (self, event, ...)
-  print("[Paix] options shown event triggered")
-end)
+-- local optionsFrame = CreateFrame('Options', nil, InterfaceOptionsFrame)
+-- optionsFrame:SetScript('OnShow', function (self, event, ...)
+--   print("[Paix] options shown event triggered")
+-- end)
 
--- test:
--- InterfaceOptionsFrame:HookScript('OnShow', function() print("OnShow") end)
+InterfaceOptionsFrame:HookScript('OnShow', function() print("Opened interface") end)
 
 -- Basic Targeting
 frame.onEvent("PLAYER_TARGET_CHANGED", function ()
