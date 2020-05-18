@@ -2,6 +2,7 @@
 message("Get to work on this addon!!")
 
 local addonName = "Paix"
+local frame = enableEvents(CreateFrame("Frame"))
 
 -- State Management
 frame.onEvent("ADDON_LOADED", function (self, event, name)
@@ -15,7 +16,6 @@ end)
 InterfaceOptionsFrame:HookScript('OnShow', function() print("Opened interface") end)
 
 -- Basic Targeting
-local frame = enableEvents(CreateFrame("Frame"))
 frame.onEvent("PLAYER_TARGET_CHANGED", function ()
   local targetName = UnitName("playertarget")
   
