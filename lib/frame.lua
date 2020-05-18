@@ -6,19 +6,14 @@
 --  frame.onEvent(EXAMPLE_EVENT, function (self, event) ... end)
 --
 function enableEvents(f)
-  print("enable events...")
-  print(type(f))
-  -- f["_events"] = {}
   f._events = {}
   
   f:SetScript("OnEvent", function(self, event, ...)
     print(event)
-    -- return self["_events"][event](self, event, ...)
     return self._events[event](self, event, ...)
   end)
 
   function f.onEvent(event, handler)
-    print("listen to " .. event)
     f:RegisterEvent(event)
     f._events[event] = handler
   end
