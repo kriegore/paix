@@ -5,7 +5,7 @@ local addonName = "Paix"
 local frame = enableEvents(CreateFrame("Frame"))
 
 -- State Management
-frame.onEvent("ADDON_LOADED", function (event, name)
+frame.onEvent("ADDON_LOADED", function (self, event, name)
   print("addon loaded: " .. name)
   if name == addonName then
     print("[" .. addonName .. "] ADDON_LOADED")
