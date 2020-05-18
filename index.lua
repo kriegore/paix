@@ -15,6 +15,7 @@ frame.onEvent("PLAYER_TARGET_CHANGED", function ()
   print(message)
 end)
 
+print(frame._events)
 
 -- For settings...
 --
