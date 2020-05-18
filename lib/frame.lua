@@ -17,6 +17,7 @@ function enableEvents(f)
 
   function f.onEvent(event, handler)
     print("listen to " .. event)
+    f:RegisterEvent(event)
     f["_events"][event] = handler
   end
 
