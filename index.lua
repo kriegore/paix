@@ -3,6 +3,13 @@ message("Get to work on this addon!!")
 
 local frame = enableEvents(CreateFrame("Frame"))
 
+-- State management
+frame.onEvent("ADDON_LOADED", function ()
+  print("[Paix] ADDON_LOADED")
+  SavedState = SavedState or {}
+end)
+
+-- Basic Targeting
 frame.onEvent("PLAYER_TARGET_CHANGED", function ()
   local targetName = UnitName("playertarget")
   local guildName = GetGuildInfo("playertarget")
