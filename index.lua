@@ -6,6 +6,7 @@ local frame = enableEvents(CreateFrame("Frame"))
 
 -- State Management
 frame.onEvent("ADDON_LOADED", function (event, name)
+  print("addon loaded: " .. name)
   if name == addonName then
     print("[" .. addonName .. "] ADDON_LOADED")
     SavedState = SavedState or {}
