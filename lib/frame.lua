@@ -6,6 +6,7 @@
 --  frame.onEvent(EXAMPLE_EVENT, function (self, event) ... end)
 --
 function enableEvents(f)
+  print("enable events...")
   f._events = {}
   
   f:SetScript("OnEvent", function(self, event, ...)
