@@ -4,6 +4,7 @@
 ## Version: 1.0
 ## SavedVariables: SavedState
 
-lib/*.lua
+lib/utility.lua
+lib/frame.lua
 
 index.lua
