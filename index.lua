@@ -1,10 +1,5 @@
-Paix = {}
-
-function Paix:test()
-  message("Get to work on this addon!!")
-end
-Paix:test()
-
+-- Personal reminder :P
+message("Get to work on this addon!!")
 
 local frame = enableEvents(CreateFrame("Frame"))
 
