@@ -3,17 +3,12 @@ Paix = {}
 function Paix:test()
   message("Get to work on this addon!!")
 end
-
 Paix:test()
 
-local function isEmpty(str)
-  return str == nil or str == ''
-end
 
+local frame = enableEvents(CreateFrame("Frame"))
 
-local frame = CreateFrame("Frame")
-frame:RegisterEvent("PLAYER_TARGET_CHANGED")
-frame:SetScript("OnEvent", function(self, event, ...)
+frame.onEvent("PLAYER_TARGET_CHANGED", function ()
   local targetName = UnitName("playertarget")
   local guildName = GetGuildInfo("playertarget")
   local message
@@ -24,6 +19,7 @@ frame:SetScript("OnEvent", function(self, event, ...)
   end
   print(message)
 end)
+
 
 -- For settings...
 --
