@@ -18,6 +18,10 @@ InterfaceOptionsFrame:HookScript('OnShow', function() print("Opened interface") 
 local frame = enableEvents(CreateFrame("Frame"))
 frame.onEvent("PLAYER_TARGET_CHANGED", function ()
   local targetName = UnitName("playertarget")
+  
+  -- Exit our early if there isn't a target
+  if isEmpty(targetName) then return end
+  
   local guildName = GetGuildInfo("playertarget")
   local message
   if isEmpty(guildName) then
