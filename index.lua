@@ -4,6 +4,7 @@ message("Get to work on this addon!!")
 local frame = enableEvents(CreateFrame("Frame"))
 
 frame.onEvent("PLAYER_TARGET_CHANGED", function ()
+  print("PLAYER_TARGET_CHANGED triggered")
   local targetName = UnitName("playertarget")
   local guildName = GetGuildInfo("playertarget")
   local message
