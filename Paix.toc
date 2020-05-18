@@ -4,4 +4,6 @@
 ## Version: 1.0
 ## SavedVariables: SavedState
 
+lib/*.lua
+
 index.lua
