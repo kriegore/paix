@@ -9,7 +9,6 @@ function enableEvents(f)
   f._events = {}
   
   f:SetScript("OnEvent", function(self, event, ...)
-    print(event)
     return self._events[event](self, event, ...)
   end)
 
