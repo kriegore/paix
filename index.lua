@@ -2,12 +2,10 @@
 message("Get to work on this addon!!")
 
 local addonName = "Paix"
-local frame = enableEvents(CreateFrame("Frame"))
 
 -- State Management
 frame.onEvent("ADDON_LOADED", function (self, event, name)
-  print("addon loaded: " .. name)
-  if name == addonName then
+  if name:lower() == addonName:lower() then
     print("[" .. addonName .. "] ADDON_LOADED")
     SavedState = SavedState or {}
   end
@@ -17,6 +15,7 @@ end)
 InterfaceOptionsFrame:HookScript('OnShow', function() print("Opened interface") end)
 
 -- Basic Targeting
+local frame = enableEvents(CreateFrame("Frame"))
 frame.onEvent("PLAYER_TARGET_CHANGED", function ()
   local targetName = UnitName("playertarget")
   local guildName = GetGuildInfo("playertarget")
@@ -28,10 +27,6 @@ frame.onEvent("PLAYER_TARGET_CHANGED", function ()
   end
   print(message)
 end)
-
-print(frame._events)
-
-
 
 
 -- POC part 1
