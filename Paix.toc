@@ -2,5 +2,6 @@
 ## Title: Paix
 ## Author: kriegore
 ## Version: 1.0
+## SavedVariables: SavedState
 
 index.lua
