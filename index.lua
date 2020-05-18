@@ -1,19 +1,18 @@
 -- Personal reminder :P
 message("Get to work on this addon!!")
 
+local addonName = "Paix"
 local frame = enableEvents(CreateFrame("Frame"))
 
--- State management
-frame.onEvent("ADDON_LOADED", function ()
-  print("[Paix] ADDON_LOADED")
-  SavedState = SavedState or {}
+-- State Management
+frame.onEvent("ADDON_LOADED", function (event, name)
+  if name == addonName then
+    print("[" .. addonName .. "] ADDON_LOADED")
+    SavedState = SavedState or {}
+  end
 end)
 
--- local optionsFrame = CreateFrame('Options', nil, InterfaceOptionsFrame)
--- optionsFrame:SetScript('OnShow', function (self, event, ...)
---   print("[Paix] options shown event triggered")
--- end)
-
+-- Addon Settings
 InterfaceOptionsFrame:HookScript('OnShow', function() print("Opened interface") end)
 
 -- Basic Targeting
@@ -31,9 +30,6 @@ end)
 
 print(frame._events)
 
--- For settings...
---
--- Example I looked at establishs app state on `PLAYER_LOGIN` event.
 
 
 
