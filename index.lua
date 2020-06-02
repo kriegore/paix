@@ -17,12 +17,17 @@ InterfaceOptionsFrame:HookScript('OnShow', function() print("Opened interface") 
 
 -- Basic Targeting
 frame.onEvent("PLAYER_TARGET_CHANGED", function ()
-  local targetName = UnitName("playertarget")
+  local tar = "playertarget"
+
+  -- Exit if target is not a player.
+  if UnitIsPlayer(tar) then return end
+
+  local targetName = UnitName(tar)
   
-  -- Exit our early if there isn't a target
+  -- Exit our early if there isn't a target.
   if isEmpty(targetName) then return end
   
-  local guildName = GetGuildInfo("playertarget")
+  local guildName = GetGuildInfo(tar)
   local message
   if isEmpty(guildName) then
     message = "target changed to " .. targetName
