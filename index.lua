@@ -13,14 +13,16 @@ frame.onEvent("ADDON_LOADED", function (self, event, name)
 end)
 
 -- Addon Settings
-InterfaceOptionsFrame:HookScript('OnShow', function() print("Opened interface") end)
+InterfaceOptionsFrame:HookScript('OnShow', function()
+  print("Opened interface")
+end)
 
 -- Basic Targeting
 frame.onEvent("PLAYER_TARGET_CHANGED", function ()
   local tar = "playertarget"
 
   -- Exit if target is not a player.
-  if UnitIsPlayer(tar) then return end
+  if not UnitIsPlayer(tar) then return end
 
   local targetName = UnitName(tar)
   
